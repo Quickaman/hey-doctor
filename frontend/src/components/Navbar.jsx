@@ -11,7 +11,6 @@ const Navbar = () => {
   const { token, setToken, userData } = useContext(AppContext);
 
   const [showMenu, setShowMenu] = useState(false);
-  console.log("ADMIN URL:", import.meta.env.VITE_ADMIN_URL);
 
   const logout = () => {
     setToken(false);
