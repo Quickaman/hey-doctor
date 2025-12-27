@@ -11,6 +11,7 @@ const Navbar = () => {
   const { token, setToken, userData } = useContext(AppContext);
 
   const [showMenu, setShowMenu] = useState(false);
+  console.log("ADMIN URL:", import.meta.env.VITE_ADMIN_URL);
 
   const logout = () => {
     setToken(false);
@@ -36,6 +37,8 @@ const Navbar = () => {
   title="Admin Login"
   className="flex items-center gap-1 text-gray-600 hover:text-primary transition hidden md:flex"
 >
+
+
 
     <RiAdminLine size={22} />
     <span className="text-sm font-medium">Admin</span>
