@@ -48,9 +48,9 @@ const Navbar = () => {
       </ul>
 
       {/* ---------- RIGHT SECTION ---------- */}
-      <div className="flex items-center gap-4 relative">
+      <div className="flex items-center gap-3 sm:gap-4 relative">
         {token && userData ? (
-          <div className="relative">
+          <div className="relative md:static md:translate-x-0 translate-x-[-40px]">
             {/* Profile icon (clickable on mobile, hover on desktop) */}
             <div
               className="flex items-center gap-2 cursor-pointer"
