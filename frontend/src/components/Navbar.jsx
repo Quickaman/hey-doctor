@@ -129,6 +129,42 @@ const Navbar = () => {
             <NavLink onClick={() => setShowMenu(false)} to="/contact">
               <p className="px-4 py-2 rounded inline-block">CONTACT</p>
             </NavLink>
+            <a
+          href={import.meta.env.VITE_ADMIN_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => setShowMenu(false)}
+          className="mt-4"
+        >
+          <p className="border px-4 py-2 rounded-full border-gray-500 text-gray-600 text-base text-center">
+            Admin
+          </p>
+        </a>
+
+        {/* -------- Mobile Create Account / Login -------- */}
+        {!token && (
+          <button
+            onClick={() => {
+              setShowMenu(false);
+              navigate("/login");
+            }}
+            className="mt-3 bg-primary text-white px-6 py-2 rounded-full text-base"
+          >
+            Create Account
+          </button>
+        )}
+        {/* -------- Mobile Logout -------- */}
+        {token && (
+          <button
+            onClick={() => {
+              logout();
+              setShowMenu(false);
+            }}
+            className="mt-3 border px-6 py-2 rounded-full text-base text-gray-600"
+          >
+            Logout
+          </button>
+        )}
           </ul>
         </div>
       </div>
