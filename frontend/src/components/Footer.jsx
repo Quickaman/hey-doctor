@@ -3,6 +3,14 @@ import { assets } from "../assets/assets";
 import { NavLink } from "react-router-dom";
 
 const Footer = () => {
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div className="md:mx-10">
       <div className="flex flex-col sm:grid grid-cols-[3fr_1fr_1fr] gap-14 my-10 mt-40 text-sm">
@@ -22,16 +30,16 @@ const Footer = () => {
         <div>
           <p className="text-xl font-medium mb-5">COMPANY</p>
           <ul className="flex flex-col gap-2 text-gray-600">
-            <NavLink to="/" className="hover:text-primary">
+            <NavLink to="/" onClick={scrollToTop} className="hover:text-primary">
               Home
             </NavLink>
-            <NavLink to="/about" className="hover:text-primary">
+            <NavLink to="/about" onClick={scrollToTop} className="hover:text-primary">
               About Us
             </NavLink>
-            <NavLink to="/doctors" className="hover:text-primary">
+            <NavLink to="/doctors" onClick={scrollToTop} className="hover:text-primary">
               Doctors
             </NavLink>
-            <NavLink to="/contact" className="hover:text-primary">
+            <NavLink to="/contact" onClick={scrollToTop} className="hover:text-primary">
               Contact
             </NavLink>
           </ul>
