@@ -37,7 +37,7 @@ const Navbar = () => {
           className="hidden md:block"
         >
         <div className="cursor-pointer">
-          <p className="border px-3 py-1 rounded-full border-gray-500 text-gray-600 text-xs font-medium">
+          <p className="border px-3 py-1 rounded-full border-gray-500 text-gray-600 text-xs font-medium translate-y-2 hover:bg-gray-200">
             Admin Login
           </p>
         </div>
