@@ -3,22 +3,22 @@ import { assets } from "../assets/assets";
 import { NavLink } from "react-router-dom";
 
 const Footer = () => {
-
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
     <div className="md:mx-10">
-      <div className="flex flex-col sm:grid grid-cols-[3fr_1fr_1fr] gap-14 my-10 mt-40 text-sm">
+      <div className="flex flex-col sm:grid grid-cols-[3fr_1fr_1fr] gap-10 sm:gap-14 my-10 mt-28 sm:mt-40 text-sm">
 
         {/* ------------ Left Section ------------ */}
         <div>
-          <img className="mb-5 w-40" src={assets.logo} alt="Logo" />
-          <p className="w-full md:w-2/3 text-gray-600 leading-6">
+          <img
+            className="mb-4 w-32 sm:w-40"
+            src={assets.logo}
+            alt="Logo"
+          />
+          <p className="w-full md:w-2/3 text-gray-600 leading-5 sm:leading-6">
             Our platform connects patients with trusted doctors, enabling easy
             appointment booking, secure medical interactions, and efficient
             healthcare management. We are committed to improving access to
@@ -28,8 +28,10 @@ const Footer = () => {
 
         {/* ------------ Center Section ------------ */}
         <div>
-          <p className="text-xl font-medium mb-5">COMPANY</p>
-          <ul className="flex flex-col gap-2 text-gray-600">
+          <p className="text-lg sm:text-xl font-medium mb-3 sm:mb-5">
+            COMPANY
+          </p>
+          <ul className="flex flex-col gap-1.5 sm:gap-2 text-gray-600">
             <NavLink to="/" onClick={scrollToTop} className="hover:text-primary">
               Home
             </NavLink>
@@ -47,8 +49,10 @@ const Footer = () => {
 
         {/* ------------ Right Section ------------ */}
         <div>
-          <p className="text-xl font-medium mb-5">GET IN TOUCH</p>
-          <ul className="flex flex-col gap-2 text-gray-600">
+          <p className="text-lg sm:text-xl font-medium mb-3 sm:mb-5">
+            GET IN TOUCH
+          </p>
+          <ul className="flex flex-col gap-1.5 sm:gap-2 text-gray-600">
             <a href="tel:+919876543210" className="hover:text-primary">
               +91 98765 43210
             </a>
@@ -62,7 +66,7 @@ const Footer = () => {
       {/* ------------ Copyright ------------ */}
       <div>
         <hr />
-        <p className="py-5 text-sm text-center text-gray-500">
+        <p className="py-4 sm:py-5 text-xs sm:text-sm text-center text-gray-500">
           © 2026 HeyDoctor!. All rights reserved.
         </p>
       </div>
