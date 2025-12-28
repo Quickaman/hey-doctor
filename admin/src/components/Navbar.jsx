@@ -12,27 +12,34 @@ const Navbar = () => {
 
   const logout = () => {
     navigate("/");
-    aToken && setAToken("");
-    aToken && localStorage.removeItem("aToken");
-    dToken && setDToken("");
-    dToken && localStorage.removeItem("dToken");
+    if (aToken) {
+      setAToken("");
+      localStorage.removeItem("aToken");
+    }
+    if (dToken) {
+      setDToken("");
+      localStorage.removeItem("dToken");
+    }
   };
 
   return (
     <div className="flex justify-between items-center px-4 sm:px-10 py-3 border-b bg-white">
+      {/* LEFT */}
       <div className="flex items-center gap-2 text-xs">
         <img
-          className="w-36 sm::w-40 cursor-pointer"
+          className="w-24 sm:w-36 cursor-pointer"
           src={assets.admin_logo}
-          alt=""
+          alt="Admin"
         />
-        <p className="border px-2.5 py-0.5 rounded-full border-gray-500 text-gray-600">
+        <p className="border px-2 py-0.5 rounded-full border-gray-500 text-gray-600 whitespace-nowrap">
           {aToken ? "Admin" : "Doctor"}
         </p>
       </div>
+
+      {/* RIGHT */}
       <button
         onClick={logout}
-        className="bg-primary text-white text-sm px-10 py-2 rounded-full"
+        className="bg-primary text-white text-sm px-4 sm:px-10 py-2 rounded-full whitespace-nowrap"
       >
         Logout
       </button>
