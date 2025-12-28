@@ -38,7 +38,7 @@ const Navbar = () => {
         >
         <div className="cursor-pointer">
           <p className="border px-3 py-1 rounded-full border-gray-500 text-gray-600 text-xs font-medium">
-            Admin
+            Admin Login
           </p>
         </div>
       </a>
