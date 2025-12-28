@@ -26,7 +26,7 @@ const Navbar = () => {
           alt="Hey Doctor"
         />
 
-        {/* Admin Login (desktop only) */}
+        {/* Admin (desktop only) */}
         <a
           href={import.meta.env.VITE_ADMIN_URL}
           target="_blank"
@@ -50,8 +50,8 @@ const Navbar = () => {
       {/* ---------- RIGHT SECTION ---------- */}
       <div className="flex items-center gap-3 sm:gap-4 relative">
         {token && userData ? (
-          <div className="relative md:static md:translate-x-0 translate-x-[-40px]">
-            {/* Profile icon (clickable on mobile, hover on desktop) */}
+          <div className="relative group md:static md:translate-x-0 translate-x-[-40px]">
+            {/* Profile trigger */}
             <div
               className="flex items-center gap-2 cursor-pointer"
               onClick={() => setShowProfileMenu(prev => !prev)}
@@ -60,8 +60,8 @@ const Navbar = () => {
               <img className="w-2.5" src={assets.dropdown_icon} alt="" />
             </div>
 
-            {/* Desktop dropdown (hover) */}
-            <div className="absolute top-0 right-0 pt-14 text-base font-medium text-gray-600 z-20 hidden md:group-hover:block md:block">
+            {/* Desktop dropdown (HOVER ONLY) */}
+            <div className="absolute top-0 right-0 pt-14 text-base font-medium text-gray-600 z-20 hidden md:group-hover:block">
               <div className="min-w-48 bg-stone-100 rounded flex flex-col gap-4 p-4">
                 <p onClick={() => navigate("/my-profile")} className="hover:text-black cursor-pointer">
                   My Profile
@@ -75,7 +75,7 @@ const Navbar = () => {
               </div>
             </div>
 
-            {/* Mobile dropdown (click) */}
+            {/* Mobile dropdown (CLICK ONLY) */}
             {showProfileMenu && (
               <div className="absolute right-0 mt-2 w-48 bg-stone-100 rounded shadow-md text-base font-medium text-gray-600 md:hidden z-30">
                 <p
@@ -117,7 +117,7 @@ const Navbar = () => {
           </button>
         )}
 
-        {/* Mobile Menu Icon */}
+        {/* Mobile menu icon */}
         <img
           onClick={() => setShowMenu(true)}
           className="w-6 md:hidden"
@@ -146,7 +146,6 @@ const Navbar = () => {
           <NavLink onClick={() => setShowMenu(false)} to="/about">ABOUT</NavLink>
           <NavLink onClick={() => setShowMenu(false)} to="/contact">CONTACT</NavLink>
 
-          {/* Mobile Admin */}
           <a
             href={import.meta.env.VITE_ADMIN_URL}
             target="_blank"
