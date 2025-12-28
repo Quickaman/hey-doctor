@@ -30,18 +30,18 @@ const Navbar = () => {
 
   {/* Admin Login Icon */}
   <a
-  href={import.meta.env.VITE_ADMIN_URL}
-  target="_blank"
-  rel="noopener noreferrer"
-  title="Admin Login"
-  className="flex items-center gap-1 text-gray-600 hover:text-primary transition hidden md:flex"
->
-
-
-
-    <RiAdminLine size={22} />
-    <span className="text-sm font-medium">Admin</span>
-  </a>
+          href={import.meta.env.VITE_ADMIN_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Admin Login"
+          className="hidden md:block"
+        >
+        <div className="cursor-pointer">
+          <p className="border px-3 py-1 rounded-full border-gray-500 text-gray-600 text-xs font-medium">
+            Admin
+          </p>
+        </div>
+      </a>
 </div>
 
       <ul className="hidden md:flex items-start gap-5 font-medium">
