@@ -9,10 +9,10 @@ const Footer = () => {
 
   return (
     <div className="md:mx-10">
-      <div className="flex flex-col sm:grid grid-cols-[3fr_1fr_1fr] gap-10 sm:gap-14 my-10 mt-28 sm:mt-40 text-sm">
+      <div className="grid grid-cols-2 sm:grid-cols-[3fr_1fr_1fr] gap-10 my-10 mt-40 text-sm">
 
         {/* ------------ Left Section ------------ */}
-        <div>
+        <div className="col-span-2 sm:col-span-1">
           <img
             className="mb-4 w-32 sm:w-40"
             src={assets.logo}
